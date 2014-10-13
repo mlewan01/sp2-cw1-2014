@@ -21,7 +21,10 @@ public class Cw1 {
         a1 = fillIntArray(a1);
         System.out.println("Entering values in to the second array.");
         a2 = fillIntArray(a2);
-        
+        if(a1.length == 0 && a2.length == 0){
+            System.out.println("Sorry, but both arrays are empty...\n  Exiting !!!");
+            System.exit(0);
+        }
         System.out.println("\n-------------------------------------------------\n");
         
         System.out.println("Printing elements of the first array: ");
@@ -109,7 +112,6 @@ public class Cw1 {
                 if(a[i] == b[j]){
                     c[k] = b[j];
                     k++;
-                    continue;
                 }
             }
         }
@@ -121,11 +123,11 @@ public class Cw1 {
     /**
      * function checks for NOT common values in given arrays and
      * @param a first array with integer elements
-     * @param b second array with integer elements to exclude form array a
+     * @param b second array with integer elements to exclude form array a(the common elements)
      * @return returns an array with NOT common elements
      */
     public static int[] displayNonCommon(int[] a, int[]b){
-        int z = a.length + b.length;
+        int z = a.length; // size of the temporary array
         int[] c = new int[z];
         int k=0;
         for(int i=0; i<a.length; i++){
@@ -140,8 +142,9 @@ public class Cw1 {
                 k++;
             }
         }
-        int[] ak = new int[k];
+        int[] ak = new int[k]; // reducing the size of the tempraray array
         System.arraycopy(c, 0, ak, 0, k);
+        
         return ak;
     }
 }
