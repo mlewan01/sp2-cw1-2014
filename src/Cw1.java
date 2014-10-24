@@ -11,8 +11,10 @@ import java.util.Scanner;
  */
 
 public class Cw1 {
+	
     final static int arrayCapacity = 100;
-    public static void main(String[] arg){
+    
+    public static void main(String[] args){
         
         int[] a1 = new int[arrayCapacity];
         int[] a2 = new int[arrayCapacity];
