@@ -1,6 +1,4 @@
 
-import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -84,6 +82,7 @@ public class Cw1 {
             j++;
             System.out.println("please enter and Int! enter 0 to exit:");
         }
+        s.close();
         int[] k = new int[j];
         System.arraycopy(a, 0, k, 0, j);
         //System.out.println(Arrays.toString(k));
